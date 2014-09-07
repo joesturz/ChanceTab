@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6206.9" systemVersion="14A343f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7026.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GSA-wJ-LD2">
+                                <rect key="frame" x="285" y="254" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="104" id="2jr-wt-gNc"/>
+                                    <constraint firstAttribute="width" constant="134" id="6O8-Iy-RzH"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="134" id="HUS-5a-SyR"/>
+                                    <constraint firstAttribute="height" constant="104" id="q4j-16-hEe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Roll">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="2jr-wt-gNc"/>
+                                        <exclude reference="6O8-Iy-RzH"/>
+                                        <exclude reference="HUS-5a-SyR"/>
+                                        <exclude reference="q4j-16-hEe"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="2jr-wt-gNc"/>
+                                        <include reference="6O8-Iy-RzH"/>
+                                        <include reference="HUS-5a-SyR"/>
+                                        <include reference="q4j-16-hEe"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="clickRoll:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="fRA-Dc-MfZ"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nw5-Fq-jSd">
+                                <rect key="frame" x="0.0" y="333" width="600" height="162"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="162" id="Ad0-Qe-drS"/>
+                                    <constraint firstAttribute="width" constant="400" id="dIG-RJ-N09"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Ad0-Qe-drS"/>
+                                        <exclude reference="dIG-RJ-N09"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Ad0-Qe-drS"/>
+                                        <include reference="dIG-RJ-N09"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="ghc-0M-H61"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="F8A-Io-dpy"/>
+                                </connections>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Random" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SOa-Yq-sqb">
+                                <rect key="frame" x="279" y="124" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="1vc-Q2-ZA3"/>
+                                    <constraint firstAttribute="width" constant="91" id="JXC-sC-zZk"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="236" id="xTP-Br-XyW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="1vc-Q2-ZA3"/>
+                                        <exclude reference="JXC-sC-zZk"/>
+                                        <exclude reference="xTP-Br-XyW"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="112" y="86" width="177" height="105"/>
+                                    <mask key="constraints">
+                                        <include reference="1vc-Q2-ZA3"/>
+                                        <include reference="JXC-sC-zZk"/>
+                                        <include reference="xTP-Br-XyW"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="SOa-Yq-sqb" secondAttribute="centerX" id="LR7-GS-7Lq"/>
+                            <constraint firstAttribute="centerX" secondItem="GSA-wJ-LD2" secondAttribute="centerX" id="LXb-FT-jFh"/>
+                            <constraint firstAttribute="centerX" secondItem="Nw5-Fq-jSd" secondAttribute="centerX" id="V3l-9o-8cX"/>
+                            <constraint firstItem="SOa-Yq-sqb" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" id="ZEv-bj-2uM"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Nw5-Fq-jSd" secondAttribute="bottom" constant="78" id="aOw-I7-fKs"/>
+                            <constraint firstItem="SOa-Yq-sqb" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="107" id="h6r-al-siI"/>
+                            <constraint firstItem="GSA-wJ-LD2" firstAttribute="top" secondItem="SOa-Yq-sqb" secondAttribute="bottom" constant="78" id="oxq-zd-gOT"/>
+                            <constraint firstItem="Nw5-Fq-jSd" firstAttribute="top" secondItem="GSA-wJ-LD2" secondAttribute="bottom" constant="8" id="s4i-pi-jBQ"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="LR7-GS-7Lq"/>
+                                <exclude reference="ZEv-bj-2uM"/>
+                                <exclude reference="h6r-al-siI"/>
+                                <exclude reference="V3l-9o-8cX"/>
+                                <exclude reference="s4i-pi-jBQ"/>
+                                <exclude reference="LXb-FT-jFh"/>
+                                <exclude reference="oxq-zd-gOT"/>
+                                <exclude reference="aOw-I7-fKs"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="LR7-GS-7Lq"/>
+                                <include reference="ZEv-bj-2uM"/>
+                                <include reference="h6r-al-siI"/>
+                                <include reference="V3l-9o-8cX"/>
+                                <include reference="s4i-pi-jBQ"/>
+                                <include reference="LXb-FT-jFh"/>
+                                <include reference="oxq-zd-gOT"/>
+                                <include reference="aOw-I7-fKs"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="dicePicker" destination="Nw5-Fq-jSd" id="W4I-gN-x7J"/>
+                        <outlet property="randomNumber" destination="SOa-Yq-sqb" id="gyy-sT-fkH"/>
+                        <outlet property="rollButton" destination="GSA-wJ-LD2" id="PvW-wa-c2i"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
