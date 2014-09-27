@@ -33,6 +33,8 @@
 @property (nonatomic) NSInteger diceCount;
 
 @property (nonatomic) NSInteger colorChangeCounter;
+@property (strong, nonatomic) UIColor *redColor;
+@property (strong, nonatomic) UIColor *blueColor;
 
 @end
 

@@ -32,6 +32,9 @@
     self.isDie3Active = YES;
     self.isDie4Active = YES;
     self.isDie5Active = YES;
+    
+    self.redColor = [UIColor colorWithRed:207.0f/255.0f green:0.0f/255.0f blue:61.0f/255.0f alpha:1.0f];
+    self.blueColor = [UIColor colorWithRed:2.0f/255.0f green:122.0f/255.0f blue:255.0f/255.0f alpha:1.0f];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -228,10 +231,10 @@
     }
     self.colorChangeCounter++;
     if (self.colorChangeCounter % 2 == 0) {
-        self.randomNumber.textColor = [UIColor blueColor];
+        self.randomNumber.textColor = self.blueColor;
     }
     else
-        self.randomNumber.textColor = [UIColor redColor];
+        self.randomNumber.textColor = self.redColor;
     //AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
 }
 -(int)getTitleIntValueFromIndex:(int)i
@@ -300,10 +303,12 @@
     if (self.isDie1Active)
     {
         self.isDie1Active = NO;
+        [self.diebutton1 setTitleColor:self.redColor forState:UIControlStateNormal];
     }
     else
     {
         self.isDie1Active = YES;
+        [self.diebutton1 setTitleColor:self.blueColor forState:UIControlStateNormal];
     }
 }
 -(IBAction)die2Tapped:(id)sender
@@ -311,10 +316,12 @@
     if (self.isDie2Active)
     {
         self.isDie2Active = NO;
+        [self.diebutton2 setTitleColor:self.redColor forState:UIControlStateNormal];
     }
     else
     {
         self.isDie2Active = YES;
+        [self.diebutton2 setTitleColor:self.blueColor forState:UIControlStateNormal];
     }
 
 }
@@ -323,10 +330,12 @@
     if (self.isDie3Active)
     {
         self.isDie3Active = NO;
+        [self.diebutton3 setTitleColor:self.redColor forState:UIControlStateNormal];
     }
     else
     {
         self.isDie3Active = YES;
+        [self.diebutton3 setTitleColor:self.blueColor forState:UIControlStateNormal];
     }
 
 }
@@ -335,10 +344,12 @@
     if (self.isDie4Active)
     {
         self.isDie4Active = NO;
+        [self.diebutton4 setTitleColor:self.redColor forState:UIControlStateNormal];
     }
     else
     {
         self.isDie4Active = YES;
+        [self.diebutton4 setTitleColor:self.blueColor forState:UIControlStateNormal];
     }
 
 }
@@ -347,10 +358,12 @@
     if (self.isDie5Active)
     {
         self.isDie5Active = NO;
+        [self.diebutton5 setTitleColor:self.redColor forState:UIControlStateNormal];
     }
     else
     {
         self.isDie5Active = YES;
+        [self.diebutton5 setTitleColor:self.blueColor forState:UIControlStateNormal];
     }
 
 }
