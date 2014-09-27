@@ -78,7 +78,13 @@
     self.isDie3Active = YES;
     self.isDie4Active = YES;
     self.isDie5Active = YES;
-
+    
+    [self.diebutton1 setTitleColor:self.blueColor forState:UIControlStateNormal];
+    [self.diebutton2 setTitleColor:self.blueColor forState:UIControlStateNormal];
+    [self.diebutton3 setTitleColor:self.blueColor forState:UIControlStateNormal];
+    [self.diebutton4 setTitleColor:self.blueColor forState:UIControlStateNormal];
+    [self.diebutton5 setTitleColor:self.blueColor forState:UIControlStateNormal];
+    
     if (component == 0)
     {
         switch (row)
