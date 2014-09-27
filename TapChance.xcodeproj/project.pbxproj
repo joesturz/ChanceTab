@@ -12,7 +12,7 @@
 		D85E0C0619BA655C00311DE8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D85E0C0519BA655C00311DE8 /* ViewController.m */; };
 		D85E0C0919BA655C00311DE8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D85E0C0719BA655C00311DE8 /* Main.storyboard */; };
 		D85E0C0B19BA655C00311DE8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D85E0C0A19BA655C00311DE8 /* Images.xcassets */; };
-		D85E0C1719BA655C00311DE8 /* ChanceTabTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D85E0C1619BA655C00311DE8 /* ChanceTabTests.m */; };
+		D85E0C1719BA655C00311DE8 /* TapChanceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D85E0C1619BA655C00311DE8 /* TapChanceTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +37,7 @@
 		D85E0C0A19BA655C00311DE8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D85E0C1019BA655C00311DE8 /* TapChanceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TapChanceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D85E0C1519BA655C00311DE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D85E0C1619BA655C00311DE8 /* ChanceTabTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChanceTabTests.m; sourceTree = "<group>"; };
+		D85E0C1619BA655C00311DE8 /* TapChanceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TapChanceTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,8 +61,8 @@
 		D85E0BF119BA655C00311DE8 = {
 			isa = PBXGroup;
 			children = (
-				D85E0BFC19BA655C00311DE8 /* ChanceTab */,
-				D85E0C1319BA655C00311DE8 /* ChanceTabTests */,
+				D85E0BFC19BA655C00311DE8 /* TapChance */,
+				D85E0C1319BA655C00311DE8 /* TapChanceTests */,
 				D85E0BFB19BA655C00311DE8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -76,7 +76,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D85E0BFC19BA655C00311DE8 /* ChanceTab */ = {
+		D85E0BFC19BA655C00311DE8 /* TapChance */ = {
 			isa = PBXGroup;
 			children = (
 				D85E0C0119BA655C00311DE8 /* AppDelegate.h */,
@@ -87,6 +87,7 @@
 				D85E0C0A19BA655C00311DE8 /* Images.xcassets */,
 				D85E0BFD19BA655C00311DE8 /* Supporting Files */,
 			);
+			name = TapChance;
 			path = ChanceTab;
 			sourceTree = "<group>";
 		};
@@ -99,12 +100,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		D85E0C1319BA655C00311DE8 /* ChanceTabTests */ = {
+		D85E0C1319BA655C00311DE8 /* TapChanceTests */ = {
 			isa = PBXGroup;
 			children = (
-				D85E0C1619BA655C00311DE8 /* ChanceTabTests.m */,
+				D85E0C1619BA655C00311DE8 /* TapChanceTests.m */,
 				D85E0C1419BA655C00311DE8 /* Supporting Files */,
 			);
+			name = TapChanceTests;
 			path = ChanceTabTests;
 			sourceTree = "<group>";
 		};
@@ -225,7 +227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D85E0C1719BA655C00311DE8 /* ChanceTabTests.m in Sources */,
+				D85E0C1719BA655C00311DE8 /* TapChanceTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
