@@ -20,7 +20,7 @@
     // Do any additional setup after loading the view, typically from a nib.
 
     self.sidesArray  = [[NSArray alloc] initWithObjects: @"2", @"4", @"6", @"8", @"10", @"12", @"20", nil];
-    self.randomNumber.text = @"ChanceTap";
+    self.randomNumber.text = @"TapChance";
     self.sides = 2;
     self.colorChangeCounter = 0;
     self.diceCountArray = [[NSArray alloc] initWithObjects:@"1",@"2",@"3",@"4",@"5", nil];
