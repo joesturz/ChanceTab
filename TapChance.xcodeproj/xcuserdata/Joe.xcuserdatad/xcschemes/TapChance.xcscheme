@@ -15,23 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D85E0BF919BA655C00311DE8"
-               BuildableName = "ChanceTab.app"
-               BlueprintName = "ChanceTab"
-               ReferencedContainer = "container:ChanceTab.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D85E0C0F19BA655C00311DE8"
-               BuildableName = "ChanceTabTests.xctest"
-               BlueprintName = "ChanceTabTests"
-               ReferencedContainer = "container:ChanceTab.xcodeproj">
+               BuildableName = "TapChance.app"
+               BlueprintName = "TapChance"
+               ReferencedContainer = "container:TapChance.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -42,24 +28,14 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D85E0C0F19BA655C00311DE8"
-               BuildableName = "ChanceTabTests.xctest"
-               BlueprintName = "ChanceTabTests"
-               ReferencedContainer = "container:ChanceTab.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D85E0BF919BA655C00311DE8"
-            BuildableName = "ChanceTab.app"
-            BlueprintName = "ChanceTab"
-            ReferencedContainer = "container:ChanceTab.xcodeproj">
+            BuildableName = "TapChance.app"
+            BlueprintName = "TapChance"
+            ReferencedContainer = "container:TapChance.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -76,9 +52,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D85E0BF919BA655C00311DE8"
-            BuildableName = "ChanceTab.app"
-            BlueprintName = "ChanceTab"
-            ReferencedContainer = "container:ChanceTab.xcodeproj">
+            BuildableName = "TapChance.app"
+            BlueprintName = "TapChance"
+            ReferencedContainer = "container:TapChance.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -94,9 +70,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D85E0BF919BA655C00311DE8"
-            BuildableName = "ChanceTab.app"
-            BlueprintName = "ChanceTab"
-            ReferencedContainer = "container:ChanceTab.xcodeproj">
+            BuildableName = "TapChance.app"
+            BlueprintName = "TapChance"
+            ReferencedContainer = "container:TapChance.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

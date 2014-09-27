@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A361c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GSA-wJ-LD2">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GSA-wJ-LD2">
                                 <rect key="frame" x="93" y="255" width="134" height="104"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Roll">
@@ -26,20 +27,23 @@
                                     <action selector="clickRoll:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="fRA-Dc-MfZ"/>
                                 </connections>
                             </button>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nw5-Fq-jSd">
+                            <pickerView contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nw5-Fq-jSd">
                                 <rect key="frame" x="-40" y="398" width="400" height="162"/>
                                 <connections>
                                     <outlet property="dataSource" destination="vXZ-lx-hvc" id="ghc-0M-H61"/>
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="F8A-Io-dpy"/>
                                 </connections>
                             </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TapChance" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SOa-Yq-sqb">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TapChance" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SOa-Yq-sqb">
                                 <rect key="frame" x="48" y="133" width="224" height="105"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="105" id="gYj-9k-tFZ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ste-wH-56T">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ste-wH-56T">
                                 <rect key="frame" x="77" y="75" width="50" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="-">
@@ -49,7 +53,7 @@
                                     <action selector="die2Tapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="4Gm-ei-jZ2"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cDa-yb-6oE">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cDa-yb-6oE">
                                 <rect key="frame" x="193" y="75" width="50" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="-">
@@ -60,7 +64,7 @@
                                     <action selector="die4Tapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="VVu-7C-3xe"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nGc-Zg-Jai">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nGc-Zg-Jai">
                                 <rect key="frame" x="251" y="75" width="50" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="-">
@@ -70,7 +74,7 @@
                                     <action selector="die5Tapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="hvB-xu-2fq"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kzG-w1-VsQ">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kzG-w1-VsQ">
                                 <rect key="frame" x="19" y="75" width="50" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="-">
@@ -80,7 +84,7 @@
                                     <action selector="die1Tapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Rbw-1d-LVY"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xN5-vY-Q3t">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xN5-vY-Q3t">
                                 <rect key="frame" x="135" y="75" width="50" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="-">
@@ -92,6 +96,22 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SOa-Yq-sqb" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="133" id="4Ro-sA-RKH"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Nw5-Fq-jSd" secondAttribute="bottom" constant="8" symbolic="YES" id="5OG-Ck-7ER"/>
+                            <constraint firstItem="Nw5-Fq-jSd" firstAttribute="top" secondItem="GSA-wJ-LD2" secondAttribute="bottom" constant="39" id="BFB-b4-K7I"/>
+                            <constraint firstItem="Nw5-Fq-jSd" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-56" id="Tx8-5R-BIG"/>
+                            <constraint firstItem="GSA-wJ-LD2" firstAttribute="top" secondItem="SOa-Yq-sqb" secondAttribute="bottom" constant="17" id="b0a-Ot-3Wf"/>
+                            <constraint firstItem="Nw5-Fq-jSd" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="bX8-wa-crF"/>
+                            <constraint firstItem="SOa-Yq-sqb" firstAttribute="top" secondItem="ste-wH-56T" secondAttribute="bottom" constant="8" symbolic="YES" id="eU9-Vh-c6g"/>
+                            <constraint firstItem="Nw5-Fq-jSd" firstAttribute="centerX" secondItem="GSA-wJ-LD2" secondAttribute="centerX" id="f6b-DA-E4G"/>
+                            <constraint firstItem="Nw5-Fq-jSd" firstAttribute="centerX" secondItem="SOa-Yq-sqb" secondAttribute="centerX" id="jS8-Jy-u3j"/>
+                            <constraint firstItem="SOa-Yq-sqb" firstAttribute="top" secondItem="xN5-vY-Q3t" secondAttribute="bottom" constant="8" symbolic="YES" id="jap-iY-25a"/>
+                            <constraint firstItem="SOa-Yq-sqb" firstAttribute="top" secondItem="kzG-w1-VsQ" secondAttribute="bottom" constant="8" symbolic="YES" id="kkC-1C-SCz"/>
+                            <constraint firstItem="SOa-Yq-sqb" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="32" id="kqP-TW-XWu"/>
+                            <constraint firstItem="SOa-Yq-sqb" firstAttribute="top" secondItem="nGc-Zg-Jai" secondAttribute="bottom" constant="8" symbolic="YES" id="qgm-ya-1HB"/>
+                            <constraint firstItem="SOa-Yq-sqb" firstAttribute="top" secondItem="cDa-yb-6oE" secondAttribute="bottom" constant="8" symbolic="YES" id="uUR-MM-4XB"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="dicePicker" destination="Nw5-Fq-jSd" id="W4I-gN-x7J"/>
