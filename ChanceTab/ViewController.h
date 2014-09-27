@@ -9,11 +9,20 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController <UIPickerViewDataSource,UIPickerViewDelegate>
-@property (strong, nonatomic) IBOutlet UILabel *die1;
-@property (strong, nonatomic) IBOutlet UILabel *die2;
-@property (strong, nonatomic) IBOutlet UILabel *die3;
-@property (strong, nonatomic) IBOutlet UILabel *die4;
-@property (strong, nonatomic) IBOutlet UILabel *die5;
+
+@property (weak, nonatomic) IBOutlet UIButton *diebutton1;
+@property (weak, nonatomic) IBOutlet UIButton *diebutton2;
+@property (weak, nonatomic) IBOutlet UIButton *diebutton3;
+@property (weak, nonatomic) IBOutlet UIButton *diebutton4;
+@property (weak, nonatomic) IBOutlet UIButton *diebutton5;
+
+@property (assign) BOOL isDie1Active;
+@property (assign) BOOL isDie2Active;
+@property (assign) BOOL isDie3Active;
+@property (assign) BOOL isDie4Active;
+@property (assign) BOOL isDie5Active;
+
+
 @property (strong, nonatomic) IBOutlet UILabel *randomNumber;
 @property (strong, nonatomic) IBOutlet UIButton *rollButton;
 @property (strong, nonatomic) IBOutlet UIPickerView *dicePicker;

@@ -26,6 +26,12 @@
     self.diceCountArray = [[NSArray alloc] initWithObjects:@"1",@"2",@"3",@"4",@"5", nil];
     self.diceCount = 1;
     NSLog(@"On inintial build sides = %ld", (long)self.sides);
+    
+    self.isDie1Active = YES;
+    self.isDie2Active = YES;
+    self.isDie3Active = YES;
+    self.isDie4Active = YES;
+    self.isDie5Active = YES;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -64,6 +70,12 @@
 }
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
+    self.isDie1Active = YES;
+    self.isDie2Active = YES;
+    self.isDie3Active = YES;
+    self.isDie4Active = YES;
+    self.isDie5Active = YES;
+
     if (component == 0)
     {
         switch (row)
@@ -130,40 +142,69 @@
     
     for (int i = 0; i < self.diceCount; i++)
     {
-        NSInteger randNum = (arc4random() % self.sides) + 1;
-        if (self.sides == 2)
+        BOOL isActiveForIndex = [self shouldAddValueToArrayAtIndex:i];
+        if (isActiveForIndex)
         {
-            switch (randNum)
+            NSInteger randNum = (arc4random() % self.sides) + 1;
+            if (self.sides == 2)
             {
-                case 1:
-                    //self.randomNumber.text = @"Heads";
-                    [array replaceObjectAtIndex:i withObject:@"H"];
-                    headCount++;
-                    break;
-                case 2:
-                    //self.randomNumber.text = @"Tails";
-                    [array replaceObjectAtIndex:i withObject:@"T"];
-                    tailCount++;
-                    break;
-                default:
-                    break;
+                switch (randNum)
+                {
+                    case 1:
+                        //self.randomNumber.text = @"Heads";
+                        [array replaceObjectAtIndex:i withObject:@"H"];
+                        headCount++;
+                        break;
+                    case 2:
+                        //self.randomNumber.text = @"Tails";
+                        [array replaceObjectAtIndex:i withObject:@"T"];
+                        tailCount++;
+                        break;
+                    default:
+                        break;
+                }
+                total = total + randNum;
             }
-            total = total + randNum;
+            else
+            {
+                //self.randomNumber.text = [NSString stringWithFormat:@"%ld", (long)randNum];
+                total = total + randNum;
+                NSString *num = [NSString stringWithFormat:@"%ld", (long)randNum];
+                [array replaceObjectAtIndex:i withObject:num];
+            }
+            NSLog(@"Roll %d = %ld", (i+1),(long)randNum);
         }
         else
         {
-            //self.randomNumber.text = [NSString stringWithFormat:@"%ld", (long)randNum];
-            total = total + randNum;
-            NSString *num = [NSString stringWithFormat:@"%ld", (long)randNum];
-            [array replaceObjectAtIndex:i withObject:num];
+            if (self.sides == 2)
+            {
+                
+                if ([self isTitleStringValueFromIndex:i])
+                {
+                    [array replaceObjectAtIndex:i withObject:@"H"];
+                    headCount++;
+                }
+                else
+                {
+                    [array replaceObjectAtIndex:i withObject:@"T"];
+                    tailCount++;
+                }
+            }
+            else
+            {
+                int dieValue = [self getTitleIntValueFromIndex:i];
+                NSString *num = [NSString stringWithFormat:@"%ld", (long)dieValue];
+                [array replaceObjectAtIndex:i withObject:num];
+                total = total + dieValue;
+            }
         }
-        NSLog(@"Roll %d = %ld", (i+1),(long)randNum);
     }
-    self.die1.text = array[0];
-    self.die2.text = array[1];
-    self.die3.text = array[2];
-    self.die4.text = array[3];
-    self.die5.text = array[4];
+    
+    [self.diebutton1 setTitle:array[0] forState:UIControlStateNormal];
+    [self.diebutton2 setTitle:array[1] forState:UIControlStateNormal];
+    [self.diebutton3 setTitle:array[2] forState:UIControlStateNormal];
+    [self.diebutton4 setTitle:array[3] forState:UIControlStateNormal];
+    [self.diebutton5 setTitle:array[4] forState:UIControlStateNormal];
     
     NSLog(@"Total = %ld", (long)total);
     if (self.sides == 2)
@@ -192,6 +233,126 @@
     else
         self.randomNumber.textColor = [UIColor redColor];
     //AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
+}
+-(int)getTitleIntValueFromIndex:(int)i
+{
+    switch (i)
+    {
+        case 0:
+            return [self.diebutton1.currentTitle intValue];
+        case 1:
+            return [self.diebutton2.currentTitle intValue];
+        case 2:
+            return [self.diebutton3.currentTitle intValue];
+        case 3:
+            return [self.diebutton4.currentTitle intValue];
+        case 4:
+            return [self.diebutton5.currentTitle intValue];
+        default:
+            return NO;
+    }
+}
+-(BOOL)isTitleStringValueFromIndex:(int)i
+{
+    switch (i)
+    {
+        case 0:
+            return [self.diebutton1.currentTitle isEqualToString:@"H"];
+        case 1:
+            return [self.diebutton2.currentTitle isEqualToString:@"H"];
+        case 2:
+            return [self.diebutton3.currentTitle isEqualToString:@"H"];
+        case 3:
+            return [self.diebutton4.currentTitle isEqualToString:@"H"];
+        case 4:
+            return [self.diebutton5.currentTitle isEqualToString:@"H"];
+        default:
+            return NO;
+    }
+}
+
+-(BOOL)shouldAddValueToArrayAtIndex:(int) i
+{
+    switch (i)
+    {
+        case 0:
+            return self.isDie1Active;
+        case 1:
+            return self.isDie2Active;
+        case 2:
+            return self.isDie3Active;
+        case 3:
+            return self.isDie4Active;
+        case 4:
+            return self.isDie5Active;
+        default:
+            return NO;
+    }
+}
+
+-(void)newRollForDieNumber:(int)i
+{
+    
+}
+
+-(IBAction)die1Tapped:(id)sender
+{
+    if (self.isDie1Active)
+    {
+        self.isDie1Active = NO;
+    }
+    else
+    {
+        self.isDie1Active = YES;
+    }
+}
+-(IBAction)die2Tapped:(id)sender
+{
+    if (self.isDie2Active)
+    {
+        self.isDie2Active = NO;
+    }
+    else
+    {
+        self.isDie2Active = YES;
+    }
+
+}
+-(IBAction)die3Tapped:(id)sender
+{
+    if (self.isDie3Active)
+    {
+        self.isDie3Active = NO;
+    }
+    else
+    {
+        self.isDie3Active = YES;
+    }
+
+}
+-(IBAction)die4Tapped:(id)sender
+{
+    if (self.isDie4Active)
+    {
+        self.isDie4Active = NO;
+    }
+    else
+    {
+        self.isDie4Active = YES;
+    }
+
+}
+-(IBAction)die5Tapped:(id)sender
+{
+    if (self.isDie5Active)
+    {
+        self.isDie5Active = NO;
+    }
+    else
+    {
+        self.isDie5Active = YES;
+    }
+
 }
 
 
