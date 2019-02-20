@@ -17,13 +17,27 @@
                     <view key="view" contentMode="scaleToFill" id="3Kz-Y4-I2P">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" semanticContentAttribute="spatial" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ChanceTap_d20_Bigger 1_1" translatesAutoresizingMaskIntoConstraints="NO" id="d55-Nq-9gR">
+                                <rect key="frame" x="74.5" y="230.5" width="226" height="226"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.4783879519" blue="0.77799999710000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="fl8-R2-AWf" firstAttribute="trailing" secondItem="d55-Nq-9gR" secondAttribute="trailing" constant="74.5" id="0X4-ka-M7l"/>
+                            <constraint firstItem="fl8-R2-AWf" firstAttribute="bottom" secondItem="d55-Nq-9gR" secondAttribute="bottom" constant="210.5" id="TAJ-07-8Fu"/>
+                            <constraint firstItem="d55-Nq-9gR" firstAttribute="leading" secondItem="fl8-R2-AWf" secondAttribute="leading" constant="74.5" id="mwE-mL-8VN"/>
+                            <constraint firstItem="d55-Nq-9gR" firstAttribute="top" secondItem="fl8-R2-AWf" secondAttribute="top" constant="210.5" id="w1a-NK-bmv"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="fl8-R2-AWf"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TGp-v2-0SX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-332" y="93"/>
+            <point key="canvasLocation" x="-332" y="92.203898050974516"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ChanceTap_d20_Bigger 1_1" width="226.15951538085938" height="226.15951538085938"/>
+    </resources>
 </document>

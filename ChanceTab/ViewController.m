@@ -33,8 +33,8 @@
     self.isDie4Active = YES;
     self.isDie5Active = YES;
     
-    self.redColor = [UIColor colorWithRed:207.0f/255.0f green:0.0f/255.0f blue:61.0f/255.0f alpha:1.0f];
-    self.blueColor = [UIColor colorWithRed:2.0f/255.0f green:122.0f/255.0f blue:255.0f/255.0f alpha:1.0f];
+    self.redColor = [UIColor colorWithRed:255.0f/255.0f green:248.0f/255.0f blue:103.0f/255.0f alpha:1.0f];
+    self.orangeColor = [UIColor colorWithRed:253.0f/255.0f green:151.0f/255.0f blue:31.0f/255.0f alpha:1.0f];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -79,12 +79,12 @@
     self.isDie4Active = YES;
     self.isDie5Active = YES;
     
-    [self.diebutton1 setTitleColor:self.blueColor forState:UIControlStateNormal];
-    [self.diebutton2 setTitleColor:self.blueColor forState:UIControlStateNormal];
-    [self.diebutton3 setTitleColor:self.blueColor forState:UIControlStateNormal];
-    [self.diebutton4 setTitleColor:self.blueColor forState:UIControlStateNormal];
-    [self.diebutton5 setTitleColor:self.blueColor forState:UIControlStateNormal];
-    
+//    [self.diebutton1 setTitleColor:self.orangeColor forState:UIControlStateNormal];
+//    [self.diebutton2 setTitleColor:self.orangeColor forState:UIControlStateNormal];
+//    [self.diebutton3 setTitleColor:self.orangeColor forState:UIControlStateNormal];
+//    [self.diebutton4 setTitleColor:self.orangeColor forState:UIControlStateNormal];
+//    [self.diebutton5 setTitleColor:self.orangeColor forState:UIControlStateNormal];
+  
     if (component == 0)
     {
         switch (row)
@@ -237,7 +237,7 @@
     }
     self.colorChangeCounter++;
     if (self.colorChangeCounter % 2 == 0) {
-        self.randomNumber.textColor = self.blueColor;
+        self.randomNumber.textColor = self.orangeColor;
     }
     else
         self.randomNumber.textColor = self.redColor;
@@ -314,7 +314,7 @@
     else
     {
         self.isDie1Active = YES;
-        [self.diebutton1 setTitleColor:self.blueColor forState:UIControlStateNormal];
+        [self.diebutton1 setTitleColor:self.orangeColor forState:UIControlStateNormal];
     }
 }
 -(IBAction)die2Tapped:(id)sender
@@ -327,7 +327,7 @@
     else
     {
         self.isDie2Active = YES;
-        [self.diebutton2 setTitleColor:self.blueColor forState:UIControlStateNormal];
+        [self.diebutton2 setTitleColor:self.orangeColor forState:UIControlStateNormal];
     }
 
 }
@@ -341,7 +341,7 @@
     else
     {
         self.isDie3Active = YES;
-        [self.diebutton3 setTitleColor:self.blueColor forState:UIControlStateNormal];
+        [self.diebutton3 setTitleColor:self.orangeColor forState:UIControlStateNormal];
     }
 
 }
@@ -355,7 +355,7 @@
     else
     {
         self.isDie4Active = YES;
-        [self.diebutton4 setTitleColor:self.blueColor forState:UIControlStateNormal];
+        [self.diebutton4 setTitleColor:self.orangeColor forState:UIControlStateNormal];
     }
 
 }
@@ -369,7 +369,7 @@
     else
     {
         self.isDie5Active = YES;
-        [self.diebutton5 setTitleColor:self.blueColor forState:UIControlStateNormal];
+        [self.diebutton5 setTitleColor:self.orangeColor forState:UIControlStateNormal];
     }
 
 }
