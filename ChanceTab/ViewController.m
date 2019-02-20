@@ -25,8 +25,8 @@
     self.colorChangeCounter = 0;
     self.diceCountArray = [[NSArray alloc] initWithObjects:@"1",@"2",@"3",@"4",@"5", nil];
     self.diceCount = 1;
-    NSLog(@"On inintial build sides = %ld", (long)self.sides);
-    
+//    NSLog(@"On inintial build sides = %ld", (long)self.sides);
+  
     self.isDie1Active = YES;
     self.isDie2Active = YES;
     self.isDie3Active = YES;
@@ -138,8 +138,8 @@
                 break;
         }
     }
-    NSLog(@"sides = %ld", (long)self.sides);
-    NSLog(@"diceCount = %ld", (long)self.diceCount);
+//    NSLog(@"sides = %ld", (long)self.sides);
+//    NSLog(@"diceCount = %ld", (long)self.diceCount);
 }
 - (IBAction)clickRoll:(id)sender
 {
@@ -181,7 +181,7 @@
                 NSString *num = [NSString stringWithFormat:@"%ld", (long)randNum];
                 [array replaceObjectAtIndex:i withObject:num];
             }
-            NSLog(@"Roll %d = %ld", (i+1),(long)randNum);
+//            NSLog(@"Roll %d = %ld", (i+1),(long)randNum);
         }
         else
         {
@@ -215,7 +215,7 @@
     [self.diebutton4 setTitle:array[3] forState:UIControlStateNormal];
     [self.diebutton5 setTitle:array[4] forState:UIControlStateNormal];
     
-    NSLog(@"Total = %ld", (long)total);
+//    NSLog(@"Total = %ld", (long)total);
     if (self.sides == 2)
     {
         if(headCount > tailCount)
