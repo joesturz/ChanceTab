@@ -10,6 +10,8 @@
 
 @interface ViewController ()
 
+- (void)setAllDiceToActive;
+- (void)setDieColor:(UIButton *)button and:(BOOL)state to:(BOOL)value;
 
 @end
 
@@ -31,19 +33,24 @@
   self.orangeColor = [UIColor colorWithRed:253.0f/255.0f green:151.0f/255.0f blue:31.0f/255.0f alpha:1.0f];
   self.whiteColor = UIColor.whiteColor;
   
-  self.isDie1Active = YES;
-  [self.diebutton1 setTitleColor:self.whiteColor forState:UIControlStateNormal];
-  self.isDie2Active = YES;
-  [self.diebutton2 setTitleColor:self.whiteColor forState:UIControlStateNormal];
-  self.isDie3Active = YES;
-  [self.diebutton3 setTitleColor:self.whiteColor forState:UIControlStateNormal];
-  self.isDie4Active = YES;
-  [self.diebutton4 setTitleColor:self.whiteColor forState:UIControlStateNormal];
-  self.isDie5Active = YES;
-  [self.diebutton5 setTitleColor:self.whiteColor forState:UIControlStateNormal];
-  
+  [self setAllDiceToActive];
+}
 
-  
+- (void)setAllDiceToActive
+{
+  [self setDieColor:self.diebutton1 and:self.isDie1Active to:YES];
+  [self setDieColor:self.diebutton2 and:self.isDie2Active to:YES];
+  [self setDieColor:self.diebutton3 and:self.isDie3Active to:YES];
+  [self setDieColor:self.diebutton4 and:self.isDie4Active to:YES];
+  [self setDieColor:self.diebutton5 and:self.isDie5Active to:YES];
+
+}
+
+-(void)setDieColor:(UIButton *)button and:(BOOL)state to:(BOOL)value
+{
+  state = value;
+  [button setTitleColor:self.whiteColor forState:UIControlStateNormal];
+  return;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -82,16 +89,7 @@
 }
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
-  self.isDie1Active = YES;
-  [self.diebutton1 setTitleColor:self.whiteColor forState:UIControlStateNormal];
-  self.isDie2Active = YES;
-  [self.diebutton2 setTitleColor:self.whiteColor forState:UIControlStateNormal];
-  self.isDie3Active = YES;
-  [self.diebutton3 setTitleColor:self.whiteColor forState:UIControlStateNormal];
-  self.isDie4Active = YES;
-  [self.diebutton4 setTitleColor:self.whiteColor forState:UIControlStateNormal];
-  self.isDie5Active = YES;
-  [self.diebutton5 setTitleColor:self.whiteColor forState:UIControlStateNormal];
+  [self setAllDiceToActive];
   
   if (component == 0)
   {
