@@ -1,38 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Bucket
+   uuid = "AFEBCF55-CDF5-4D88-8927-BC3A956DE1CE"
    type = "1"
    version = "2.0">
    <Breakpoints>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "750F09FF-26E5-4EAD-B82C-F398FAC22FCD"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ChanceTab/ViewController.m"
-            timestampString = "572420372.491208"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
-            landmarkName = "-pickerView:numberOfRowsInComponent:"
+            startingLineNumber = "317"
+            endingLineNumber = "317"
+            landmarkName = "-die1Tapped:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "B86D3393-C46F-49EB-9D2C-64D08357F8EF"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ChanceTab/ViewController.m"
-            timestampString = "572420372.49158"
+            filePath = "ChanceTab/ViewContoller.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "103"
-            endingLineNumber = "103"
-            landmarkName = "-pickerView:didSelectRow:inComponent:"
-            landmarkType = "7">
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "ViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

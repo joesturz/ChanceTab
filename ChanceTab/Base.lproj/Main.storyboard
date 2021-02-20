@@ -1,18 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
-    <device id="retina6_5" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment version="4624" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="TapChance" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -22,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TapChance" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SOa-Yq-sqb">
-                                <rect key="frame" x="119.33333333333333" y="292" width="175.33333333333337" height="43"/>
+                                <rect key="frame" x="119.66666666666669" y="292" width="175" height="43"/>
                                 <color key="tintColor" red="0.0" green="0.4783879519" blue="0.77799999710000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -30,12 +28,8 @@
                             </label>
                             <pickerView contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="Nw5-Fq-jSd">
                                 <rect key="frame" x="47" y="607" width="320" height="216"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="ghc-0M-H61"/>
-                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="F8A-Io-dpy"/>
-                                </connections>
                             </pickerView>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GSA-wJ-LD2">
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GSA-wJ-LD2">
                                 <rect key="frame" x="57" y="427.66666666666669" width="300" height="41"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -53,7 +47,7 @@
                             <stackView opaque="NO" contentMode="scaleAspectFit" verticalHuggingPriority="1000" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="E9f-9R-yBl">
                                 <rect key="frame" x="76" y="105" width="262" height="36"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kzG-w1-VsQ">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kzG-w1-VsQ">
                                         <rect key="frame" x="0.0" y="0.0" width="30" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -62,10 +56,10 @@
                                             <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="die1Tapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Rbw-1d-LVY"/>
+                                            <action selector="die0Tapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Yqq-tq-n2k"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ste-wH-56T">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ste-wH-56T">
                                         <rect key="frame" x="58" y="0.0" width="30" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -74,10 +68,10 @@
                                             <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="die2Tapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="4Gm-ei-jZ2"/>
+                                            <action selector="die1Tapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="vuP-9c-dh2"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xN5-vY-Q3t">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xN5-vY-Q3t">
                                         <rect key="frame" x="116" y="0.0" width="30" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -86,10 +80,10 @@
                                             <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="die3Tapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="K06-1E-r21"/>
+                                            <action selector="die2Tapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="6Z7-lv-Qy9"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cDa-yb-6oE">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cDa-yb-6oE">
                                         <rect key="frame" x="174" y="0.0" width="30" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -98,10 +92,10 @@
                                             <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="die4Tapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="VVu-7C-3xe"/>
+                                            <action selector="die3Tapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="a4E-al-b7w"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nGc-Zg-Jai">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nGc-Zg-Jai">
                                         <rect key="frame" x="232" y="0.0" width="30" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -110,7 +104,7 @@
                                             <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="die5Tapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="hvB-xu-2fq"/>
+                                            <action selector="die4Tapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Qbp-Px-R1L"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -130,12 +124,12 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="dicePicker" destination="Nw5-Fq-jSd" id="W4I-gN-x7J"/>
-                        <outlet property="diebutton1" destination="kzG-w1-VsQ" id="u8z-G9-d0I"/>
-                        <outlet property="diebutton2" destination="ste-wH-56T" id="rQx-0f-dOr"/>
-                        <outlet property="diebutton3" destination="xN5-vY-Q3t" id="1N6-WZ-g5r"/>
-                        <outlet property="diebutton4" destination="cDa-yb-6oE" id="W21-sb-bi8"/>
-                        <outlet property="diebutton5" destination="nGc-Zg-Jai" id="oEN-dM-s1U"/>
+                        <outlet property="dicePicker" destination="Nw5-Fq-jSd" id="ucY-q7-ogD"/>
+                        <outlet property="dieButton0" destination="kzG-w1-VsQ" id="xDh-IG-V9P"/>
+                        <outlet property="dieButton1" destination="ste-wH-56T" id="l9K-1O-0mD"/>
+                        <outlet property="dieButton2" destination="xN5-vY-Q3t" id="yHi-E1-m9n"/>
+                        <outlet property="dieButton3" destination="cDa-yb-6oE" id="fIt-HL-cQa"/>
+                        <outlet property="dieButton4" destination="nGc-Zg-Jai" id="Bnq-b9-fPs"/>
                         <outlet property="randomNumber" destination="SOa-Yq-sqb" id="gyy-sT-fkH"/>
                         <outlet property="rollButton" destination="GSA-wJ-LD2" id="PvW-wa-c2i"/>
                     </connections>
