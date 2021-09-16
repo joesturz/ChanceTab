@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class ViewController: UIViewController {
+class DiceRollerViewController: UIViewController {
   
   @IBOutlet var dieButton0: UIButton? = UIButton()
   @IBOutlet var dieButton1: UIButton? = UIButton()
@@ -127,7 +127,7 @@ class ViewController: UIViewController {
   }
 }
 
-extension ViewController: UIPickerViewDataSource, UIPickerViewDelegate {
+extension DiceRollerViewController: UIPickerViewDataSource, UIPickerViewDelegate {
   func numberOfComponents(in pickerView: UIPickerView) -> Int {
     return 2
   }
@@ -165,7 +165,7 @@ extension ViewController: UIPickerViewDataSource, UIPickerViewDelegate {
 }
 
 //MARK: Die Methods
-extension ViewController {
+extension DiceRollerViewController {
   func setAllDiceToActive() {
     setDieColor(for: dieButton0)
     setDieColor(for: dieButton1)
